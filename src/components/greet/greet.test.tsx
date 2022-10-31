@@ -4,15 +4,27 @@
 import { render, screen } from '@testing-library/react';
 import { Greet } from './greet';
 
-test('Greet renders correctly', () => {
-  render(<Greet />);
-  const textElement = screen.getByText('Hello');
-  expect(textElement).toBeInTheDocument();
+describe('Greet', () => {
+  test('renders correctly', () => {
+    render(<Greet />);
+    const textElement = screen.getByText('Hello');
+    expect(textElement).toBeInTheDocument();
+  });
+
+  describe('Nested', () => {
+    test('renders with a name', () => {
+      render(<Greet name="dangelo" />);
+      const textElemnet = screen.getByText('Hello dangelo');
+
+      expect(textElemnet).toBeInTheDocument();
+    });
+  });
 });
 
-test('Greet renders with a name', () => {
-  render(<Greet name="dangelo" />);
-  const textElemnet = screen.getByText('Hello dangelo');
-
-  expect(textElemnet).toBeInTheDocument();
+describe('Greet2', () => {
+  test('renders correctly', () => {
+    render(<Greet />);
+    const textElement = screen.getByText('Hello');
+    expect(textElement).toBeInTheDocument();
+  });
 });
