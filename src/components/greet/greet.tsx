@@ -1,7 +1,5 @@
-interface Props {
-  name?: string;
-}
+import type { GreetProps } from './greet.types';
 
-export const Greet = ({ name }: Props) => {
-  return <div>Hello {name}</div>;
+export const Greet = ({ name }: GreetProps) => {
+  return <div>Hello {name ? name : 'Guest'}</div>;
 };
