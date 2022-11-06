@@ -6,14 +6,14 @@ export const Application = () => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+          <input id="name" type="text" />
         </div>
         <div>
           <label htmlFor="bio">bio</label>
           <textarea id="bio" name="bio"></textarea>
         </div>
         <div>
-          <label htmlFor="job-locaion">Job location</label>
+          <label htmlFor="job-location">Name</label>
           <select id="job-location">
             <option value="">Select a country</option>
             <option value="US">United States</option>
@@ -24,7 +24,7 @@ export const Application = () => {
           </select>
         </div>
         <div>
-          <label htmlFor="">
+          <label>
             <input type="checkbox" id="terms" />i agree to the terms and
             conditions
           </label>
